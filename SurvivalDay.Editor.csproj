@@ -266,6 +266,9 @@
     <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
       <HintPath>C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/15.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
+    <Reference Include="LightJson">
+      <HintPath>Assets/Plugins/LightJson.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>Assets/ThirdLibrary/UnityPackages/JsonNet/Newtonsoft.Json.dll</HintPath>
     </Reference>
@@ -290,9 +293,6 @@
     <Reference Include="UnityEngine.StandardEvents">
       <HintPath>C:/Users/Thomas Bergerson/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.10/UnityEngine.StandardEvents.dll</HintPath>
     </Reference>
-    <Reference Include="LightJson">
-      <HintPath>Assets/Plugins/LightJson.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="SurvivalDay.csproj">
@@ -301,6 +301,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Editor\NewBehaviourScript.cs" />
     <Compile Include="Assets\Editor\SpriteSheetPackerImport.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
