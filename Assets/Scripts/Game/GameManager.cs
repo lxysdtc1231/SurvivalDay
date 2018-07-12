@@ -12,6 +12,8 @@ public class GameManager : MonoBehaviour {
         LoadSaveInfo();
         //生成角色
         Player.PlayerSpawn(BornPoint);
+        //加载地图
+
         //生成地图
         World.WorldSpawn(BornPoint);
         //GameObject.Find("World").GetComponent<World>().WorldSpawn(BornPoint);

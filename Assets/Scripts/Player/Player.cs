@@ -10,7 +10,7 @@ public class Player : MonoBehaviour {
     public int PlayerID;
     //角色昵称
     public string PlayerName;
-
+    
     /// <summary>
     /// 角色生成器
     /// 作者：Dawn

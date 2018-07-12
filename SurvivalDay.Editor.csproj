@@ -301,7 +301,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Editor\NewBehaviourScript.cs" />
     <Compile Include="Assets\Editor\SpriteSheetPackerImport.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
