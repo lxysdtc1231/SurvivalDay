@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour {
         //加载地图
 
         //生成地图
-        World.WorldSpawn(BornPoint);
+        //World.WorldSpawn(BornPoint);
         //GameObject.Find("World").GetComponent<World>().WorldSpawn(BornPoint);
         //随机出生点
         //BornPoint = new Vector2(Random.Range(0, 100), Random.Range(0, 100));
