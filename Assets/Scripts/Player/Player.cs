@@ -10,25 +10,36 @@ public class Player : MonoBehaviour {
     public int PlayerID;
     //角色昵称
     public string PlayerName;
-    
-    /// <summary>
-    /// 角色生成器
-    /// 作者：Dawn
-    /// </summary>
-    ///<param name= PlayerID">角色ID</param>
-    ///<param name="pos">生成位置</param>
+    //角色等级
+    public int Level;
+    //角色血量
+    public int HP;
+    //角色饱腹度
+    public int Starvation;
+    //口渴度
+    public int Thirsty;
+    //攻击力
+    public int Attack;
+    //防御值
+    public int Defenses;
+
+    //角色生成器
     public static void PlayerSpawn(Vector2 pos)
     {
-        GameObject player = Resources.Load("Player/MainPlayer") as GameObject;
-        Instantiate(player, pos, Quaternion.identity);
+
+        Player player = new Player();
+        player.PlayerID = 001;
+        player.Level = 1;
+        player.HP = 100;
+        player.Starvation = 100;
+        player.Thirsty = 100;
+        player.Attack = 5;
+        player.Defenses = 5;
+        GameObject playermodel = Resources.Load("Player/MainPlayer") as GameObject;
+        Instantiate(playermodel, pos, Quaternion.identity);
     }
 
-    /// <summary>
-    /// 从外部读取角色信息
-    /// 作者：
-    /// </summary>
-    ///<param name= ""></param>
-    ///<param name=""></param>
+    //加载角色数据
     public static void LoadPlayerInfo()
     {
 
@@ -36,17 +47,13 @@ public class Player : MonoBehaviour {
     }
 
 
-    /// <summary>
-    /// 保存角色信息并导出外部文件
-    /// 作者：
-    /// </summary>
-    ///<param name= ""></param>
-    ///<param name=""></param>
-    ///<returns></returns>
+    //保存角色数据
     public static void SavePlayerInfo()
     {
 
     }
+
+
 
   
 }

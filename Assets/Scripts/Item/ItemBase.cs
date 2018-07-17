@@ -6,12 +6,13 @@ using UnityEngine;
 /// </summary>
 public class ItemBase  {
 
-    //物品编号
+   //物品编号
     public int ItemID;
-   //类别
+    //物品名称
+    public string ItemName;
+    //类别
     public int type;
-    //数量 
-    public int Item_Count;
+   
     //物品类型  装备 武器 食物 消耗品 材料
     enum Item
     {

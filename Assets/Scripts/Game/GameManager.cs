@@ -12,13 +12,7 @@ public class GameManager : MonoBehaviour {
         LoadSaveInfo();
         //生成角色
         Player.PlayerSpawn(BornPoint);
-        //加载地图
-
-        //生成地图
-        //World.WorldSpawn(BornPoint);
-        //GameObject.Find("World").GetComponent<World>().WorldSpawn(BornPoint);
-        //随机出生点
-        //BornPoint = new Vector2(Random.Range(0, 100), Random.Range(0, 100));
+        
 
     }
 
@@ -33,7 +27,7 @@ public class GameManager : MonoBehaviour {
         World.LoadWorldInfo();
         // 读取角色信息
         Player.LoadPlayerInfo();
-
+        
        
     }
 

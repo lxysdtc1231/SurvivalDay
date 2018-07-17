@@ -295,9 +295,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\BackpackManager\LoginPanel.cs" />
     <Compile Include="Assets\Scripts\BackpackManager\PanelBase.cs" />
     <Compile Include="Assets\Scripts\BackpackManager\PanelMgr.cs" />
+    <Compile Include="Assets\Scripts\BackpackManager\StatuPanel.cs" />
     <Compile Include="Assets\Scripts\BackpackManager\UIOperation.cs" />
     <Compile Include="Assets\Scripts\Common\Common.cs" />
     <Compile Include="Assets\Scripts\Game\GameManager.cs" />

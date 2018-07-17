@@ -87,8 +87,8 @@ public class PanelMgr : MonoBehaviour
 ///分层类型
 public enum PanelLayer
 {
-    //面板
-    Panel,
-    //提示
-    Tips,
+    //状态面板
+    Statu,
+    //背包
+    Package,
 }
