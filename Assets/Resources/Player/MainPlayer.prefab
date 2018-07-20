@@ -38,7 +38,7 @@ Transform:
   m_GameObject: {fileID: 1325321238878490}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -10.23, y: -0.286, z: -0.04175752}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 2, y: 2, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -67,7 +67,7 @@ Animator:
   m_GameObject: {fileID: 1325321238878490}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3bf093d03b66bf54593d694c2505878b, type: 2}
+  m_Controller: {fileID: 9100000, guid: ab42e554312089a49b0bce67303cdd7f, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -86,7 +86,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94658c00b5ee9e744b872fdb7b99c796, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Player_Rot: 0
   MoveSpeed: 1
+  myrot:
+  - {fileID: 21300000, guid: 3e0b9ec48b1b630459e836e64ed7e6f9, type: 3}
+  - {fileID: 21300000, guid: 9c67b84f41ee2904eb32d31bf0213a65, type: 3}
+  - {fileID: 21300000, guid: ae9f9c984e53d75418246a4c7b540578, type: 3}
+  - {fileID: 21300000, guid: 2a3e1cb732c52ca47a029326ca4b153d, type: 3}
 --- !u!212 &212565801230424108
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -121,7 +127,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: ab4f61686c17a4444ac9ac3ae61115ef, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2201a392e4d8be74c9dcbd440649c4ea, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

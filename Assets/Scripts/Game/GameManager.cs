@@ -12,7 +12,8 @@ public class GameManager : MonoBehaviour {
         LoadSaveInfo();
         //生成角色
         Player.PlayerSpawn(BornPoint);
-        
+        //显示状态
+        PanelMgr.instance.OpenPanel<StatuPanel>("");
 
     }
 
@@ -31,5 +32,10 @@ public class GameManager : MonoBehaviour {
        
     }
 
+    //背包点击事件
+    public void OnPackageClick()
+    {
+        
+    }
 
 }

@@ -16,7 +16,7 @@ public class StatuPanel : PanelBase
     public override void Init(params object[] args)
     {
         base.Init(args);
-        skinPath = "Statu";
+        skinPath = "Statu_Skin";
         layer = PanelLayer.Statu;
     }
 
@@ -24,9 +24,9 @@ public class StatuPanel : PanelBase
     {
         base.OnShowing();
         Transform skinTrans = skin.transform;
-        HP = skinTrans.Find("HP").GetComponent<Text>();
-        Water = skinTrans.Find("Water").GetComponent<Text> ();
-        Hunger = skinTrans.Find(" Hunger").GetComponent<Text>();
+        HP = skinTrans.Find("Txt_HP").GetComponent<Text>();
+        Water = skinTrans.Find("Txt_Water").GetComponent<Text> ();
+        Hunger = skinTrans.Find("Txt_Hunger").GetComponent<Text>();
     }
     #endregion
   
