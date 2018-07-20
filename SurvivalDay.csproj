@@ -316,6 +316,7 @@
     <Compile Include="Assets\Scripts\Player\PlayerController.cs" />
     <Compile Include="Assets\Scripts\TimeSystem\DayTime.cs" />
     <Compile Include="Assets\Scripts\TimeSystem\Season.cs" />
+    <Compile Include="Assets\Scripts\TimeSystem\TimeSystem.cs" />
     <Compile Include="Assets\Scripts\WorldSpawn\World.cs" />
     <Compile Include="Assets\ThirdLibrary\UnityPackages\JsonNetSample\JsonNetSample.cs" />
   </ItemGroup>
