@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
 /// <summary>
 /// 玩家类
 /// </summary>
@@ -62,10 +63,17 @@ public class Player : MonoBehaviour {
     //保存角色数据
     public static void SavePlayerInfo()
     {
+       
+
+
 
     }
 
-
+    //玩家掉血
+    public static void HPDecrease(int value)
+    {
+        HP = HP - value;
+    }
 
   
 }

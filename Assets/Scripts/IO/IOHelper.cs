@@ -1,159 +1,135 @@
-﻿/**
- * Unity3D数据持久化辅助类
- * 作者:秦元培
- * 时间:2015年8月14日
- **/
-
+﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
-using System.Collections;
-using System;
 using System.IO;
-using System.Text;
-using System.Security.Cryptography;
-using Newtonsoft.Json;
+using LitJson;
+using Assets.Scripts.Player;
+using System.Runtime.Serialization.Formatters.Binary;
 
-public static class IOHelper
-{
-    /// <summary>
-    /// 判断文件是否存在
-    /// </summary>
-    public static bool IsFileExists(string fileName)
+public class IOHelper : MonoBehaviour {
+    public PlayerList playerList = new PlayerList();
+
+     void Start()
     {
-        return File.Exists(fileName);
+        PlayerInfo myplayer = new PlayerInfo();
+        myplayer.PlayerID = 1;
+        myplayer.PlayerName = "Dawn";
+        myplayer.Level = 1;
+        myplayer.HP = 100;
+        myplayer.Starvation = 200;
+        myplayer.Thirsty = 200;
+        myplayer.Attack = 10;
+        myplayer.Defenses = 10;
+
+        Save(myplayer);
+        Debug.Log(LoadJsonFromFile().PlayerName);
     }
 
-    /// <summary>
-    /// 判断文件夹是否存在
-    /// </summary>
-    public static bool IsDirectoryExists(string fileName)
+    public void Save(PlayerInfo player)
     {
-        return Directory.Exists(fileName);
-    }
+        //打包后Resources文件夹不能存储文件，如需打包后使用自行更换目录
+        string filePath = Application.dataPath + @"/AssetBundle/JsonPlayer.json";
+        Debug.Log(Application.dataPath + @"/AssetBundle/JsonPlayer.json");
 
-    /// <summary>
-    /// 创建一个文本文件    
-    /// </summary>
-    /// <param name="fileName">文件路径</param>
-    /// <param name="content">文件内容</param>
-    public static void CreateFile(string fileName, string content)
-    {
-        StreamWriter streamWriter = File.CreateText(fileName);
-        streamWriter.Write(content);
-        streamWriter.Close();
-    }
+        if (!File.Exists(filePath))  //不存在就创建键值对
+        {
+            playerList.dictionary.Add("PlayerID", player.PlayerID.ToString());
+            playerList.dictionary.Add("PlayerName", player.PlayerName);
+            playerList.dictionary.Add("Level", player.Level.ToString());
+            playerList.dictionary.Add("HP", player.HP.ToString());
+            playerList.dictionary.Add("Starvation", player.Starvation.ToString());
+            playerList.dictionary.Add("Thirsty", player.Thirsty.ToString());
+            playerList.dictionary.Add("Attack", player.Attack.ToString());
+            playerList.dictionary.Add("Defenses", player.Defenses.ToString());
+        }
+        else   //若存在就更新值
+        {
+            playerList.dictionary["PlayerID"] = player.PlayerID.ToString();
+            playerList.dictionary["PlayerName"] = player.PlayerName;
+            playerList.dictionary["Level"] = player.Level.ToString();
+            playerList.dictionary["HP"] = player.HP.ToString();
+            playerList.dictionary["Starvation"] = player.Starvation.ToString();
+            playerList.dictionary["Thirsty"] = player.Thirsty.ToString();
+            playerList.dictionary["Attack"] = player.Attack.ToString();
+            playerList.dictionary["Defenses"] = player.Defenses.ToString();
+        }
 
+        //找到当前路径
+        FileInfo file = new FileInfo(filePath);
+        //判断有没有文件，有则打开文件，，没有创建后打开文件
+        StreamWriter sw = file.CreateText();
+        //ToJson接口将你的列表类传进去，，并自动转换为string类型
+        string json = JsonMapper.ToJson(playerList.dictionary);
+        //将转换好的字符串存进文件，
+        sw.WriteLine(json);
+        //注意释放资源
+        sw.Close();
+        sw.Dispose();
+
+        UnityEditor.AssetDatabase.Refresh();
+
+    }
     /// <summary>
-    /// 创建一个文件夹
+    /// 读取保存数据的方法
     /// </summary>
-    public static void CreateDirectory(string fileName)
+    public void LoadPlayer()
     {
-        //文件夹存在则返回
-        if (IsDirectoryExists(fileName))
+        //TextAsset该类是用来读取配置文件的
+        string path = "JsonPlayer";
+        TextAsset asset = Resources.Load("JsonPlayer") as TextAsset;
+      
+
+        if (!asset)  //读不到就退出此方法
             return;
-        Directory.CreateDirectory(fileName);
+
+        string strdata = asset.text;
+        JsonData jsdata3 = JsonMapper.ToObject(strdata);
+        //在这里循环输出表示读到了数据，，即此数据可以使用了
+        for (int i = 0; i < jsdata3.Count; i++)
+        {
+            Debug.Log(jsdata3[i]);
+        }
+        //使用foreach输出的话会以[键，值]，，，
+        /*foreach (var item in jsdata3)
+        {
+            Debug.Log(item);
+        }*/
+
     }
 
-    public static void SetData(string fileName, object pObject)
+    public static PlayerInfo LoadJsonFromFile()
     {
-        //将对象序列化为字符串
-        string toSave = SerializeObject(pObject);
-        //对字符串进行加密,32位加密密钥
-        toSave = RijndaelEncrypt(toSave, "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
-        StreamWriter streamWriter = File.CreateText(fileName);
-        streamWriter.Write(toSave);
-        streamWriter.Close();
-    }
+        BinaryFormatter bf = new BinaryFormatter();
 
-    public static object GetData(string fileName, Type pType)
-    {
-        StreamReader streamReader = File.OpenText(fileName);
-        string data = streamReader.ReadToEnd();
-        //对数据进行解密，32位解密密钥
-        data = RijndaelDecrypt(data, "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
-        streamReader.Close();
-        return DeserializeObject(data, pType);
-    }
+        if (!File.Exists(Application.dataPath + "/Data/JsonPlayer.json"))
+        {
+            Debug.Log("读取为空");
+            return null;
+        }
 
-    /// <summary>
-    /// Rijndael加密算法
-    /// </summary>
-    /// <param name="pString">待加密的明文</param>
-    /// <param name="pKey">密钥,长度可以为:64位(byte[8]),128位(byte[16]),192位(byte[24]),256位(byte[32])</param>
-    /// <param name="iv">iv向量,长度为128（byte[16])</param>
-    /// <returns></returns>
-    private static string RijndaelEncrypt(string pString, string pKey)
-    {
-        //密钥
-        byte[] keyArray = UTF8Encoding.UTF8.GetBytes(pKey);
-        //待加密明文数组
-        byte[] toEncryptArray = UTF8Encoding.UTF8.GetBytes(pString);
+        StreamReader sr = new StreamReader(Application.dataPath + "/Data/JsonPlayer.json");
 
-        //Rijndael解密算法
-        RijndaelManaged rDel = new RijndaelManaged();
-        rDel.Key = keyArray;
-        rDel.Mode = CipherMode.ECB;
-        rDel.Padding = PaddingMode.PKCS7;
-        ICryptoTransform cTransform = rDel.CreateEncryptor();
+        //FileStream file = File.Open(Application.dataPath + "/Test.json", FileMode.Open, FileAccess.ReadWrite);
+        //if (file.Length == 0)
+        //{
+        //    return null;
+        //}
 
-        //返回加密后的密文
-        byte[] resultArray = cTransform.TransformFinalBlock(toEncryptArray, 0, toEncryptArray.Length);
-        return Convert.ToBase64String(resultArray, 0, resultArray.Length);
-    }
+        //string json = (string)bf.Deserialize(file);
+        //file.Close();
 
-    /// <summary>
-    /// ijndael解密算法
-    /// </summary>
-    /// <param name="pString">待解密的密文</param>
-    /// <param name="pKey">密钥,长度可以为:64位(byte[8]),128位(byte[16]),192位(byte[24]),256位(byte[32])</param>
-    /// <param name="iv">iv向量,长度为128（byte[16])</param>
-    /// <returns></returns>
-    private static String RijndaelDecrypt(string pString, string pKey)
-    {
-        //解密密钥
-        byte[] keyArray = UTF8Encoding.UTF8.GetBytes(pKey);
-        //待解密密文数组
-        byte[] toEncryptArray = Convert.FromBase64String(pString);
+        if (sr == null)
+        {
+            Debug.Log("111");
+            return null;
+        }
+        string json = sr.ReadToEnd();
 
-        //Rijndael解密算法
-        RijndaelManaged rDel = new RijndaelManaged();
-        rDel.Key = keyArray;
-        rDel.Mode = CipherMode.ECB;
-        rDel.Padding = PaddingMode.PKCS7;
-        ICryptoTransform cTransform = rDel.CreateDecryptor();
+        if (json.Length > 0)
+        {
+            return JsonUtility.FromJson<PlayerInfo>(json);
+        }
 
-        //返回解密后的明文
-        byte[] resultArray = cTransform.TransformFinalBlock(toEncryptArray, 0, toEncryptArray.Length);
-        return UTF8Encoding.UTF8.GetString(resultArray);
-    }
-
-
-    /// <summary>
-    /// 将一个对象序列化为字符串
-    /// </summary>
-    /// <returns>The object.</returns>
-    /// <param name="pObject">对象</param>
-    /// <param name="pType">对象类型</param>
-    private static string SerializeObject(object pObject)
-    {
-        //序列化后的字符串
-        string serializedString = string.Empty;
-        //使用Json.Net进行序列化
-        serializedString = JsonConvert.SerializeObject(pObject);
-        return serializedString;
-    }
-
-    /// <summary>
-    /// 将一个字符串反序列化为对象
-    /// </summary>
-    /// <returns>The object.</returns>
-    /// <param name="pString">字符串</param>
-    /// <param name="pType">对象类型</param>
-    private static object DeserializeObject(string pString, Type pType)
-    {
-        //反序列化后的对象
-        object deserializedObject = null;
-        //使用Json.Net进行反序列化
-        deserializedObject = JsonConvert.DeserializeObject(pString, pType);
-        return deserializedObject;
+        return null;
     }
 }
