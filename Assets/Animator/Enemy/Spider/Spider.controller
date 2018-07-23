@@ -13,19 +13,19 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: Idle
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: Blend
     m_Type: 1
     m_DefaultFloat: 4
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -769,19 +769,19 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: 1102829803418917812}
-    m_Position: {x: 696, y: -24, z: 0}
+    m_Position: {x: 708, y: -24, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102736350134973186}
-    m_Position: {x: 708, y: 228, z: 0}
+    m_Position: {x: 708, y: 216, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102588671954796964}
     m_Position: {x: 336, y: 96, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102007197432250192}
-    m_Position: {x: 960, y: 96, z: 0}
+    m_Position: {x: 948, y: 96, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102200247837098574}
-    m_Position: {x: 348, y: 216, z: 0}
+    m_Position: {x: 336, y: 216, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []

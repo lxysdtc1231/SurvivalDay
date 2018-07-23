@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Assets.Scripts.Player;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 /// <summary>
@@ -7,43 +8,54 @@ using UnityEngine;
 public class Player : MonoBehaviour {
   
     //角色ID
-    public int PlayerID;
+    public  static int PlayerID;
     //角色昵称
-    public string PlayerName;
+    public static  string PlayerName;
     //角色等级
-    public int Level;
+    public static int Level;
     //角色血量
-    public int HP;
+    public static int HP;
     //角色饱腹度
-    public int Starvation;
+    public static  int Starvation;
     //口渴度
-    public int Thirsty;
+    public static int Thirsty;
     //攻击力
-    public int Attack;
+    public static int Attack;
     //防御值
-    public int Defenses;
-
-    //角色生成器
-    public static void PlayerSpawn(Vector2 pos)
+    public static int Defenses;
+    //存储读取的角色数据
+    public PlayerInfo playerinfo;
+    void Start()
     {
+        //加载角色数据
+        playerinfo = LoadPlayerInfo();
+        //角色数据赋值
+        PlayerID = playerinfo.PlayerID;
+        PlayerName = playerinfo.PlayerName;
+        Level = playerinfo.Level;
+        HP = playerinfo.HP;
+        Starvation = playerinfo.Starvation;
+        Thirsty = playerinfo.Thirsty;
+        Attack = playerinfo.Attack;
+        Defenses = playerinfo.Defenses;
 
-        Player player = new Player();
-        player.PlayerID = 001;
-        player.Level = 1;
-        player.HP = 100;
-        player.Starvation = 100;
-        player.Thirsty = 100;
-        player.Attack = 5;
-        player.Defenses = 5;
-        GameObject playermodel = Resources.Load("Player/MainPlayer") as GameObject;
-        Instantiate(playermodel, pos, Quaternion.identity);
     }
 
+
     //加载角色数据
-    public static void LoadPlayerInfo()
+    public PlayerInfo LoadPlayerInfo()
     {
-
-
+        PlayerInfo get = new PlayerInfo();
+        get.PlayerID = 1;
+        get.PlayerName = "Dawn";
+        get.Level = 1;
+        get.HP = 100;
+        get.Starvation = 200;
+        get.Thirsty = 200;
+        get.Attack = 10;
+        get.Defenses = 10;
+        return get;
+    
     }
 
 

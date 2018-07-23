@@ -13,12 +13,14 @@
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
-    <CompilerResponseFile></CompilerResponseFile>
+    <CompilerResponseFile>
+    </CompilerResponseFile>
     <UnityProjectGenerator>VSTU</UnityProjectGenerator>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows64:19</UnityBuildTarget>
     <UnityVersion>2017.3.1f1</UnityVersion>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>
+    </RootNamespace>
     <LangVersion>4</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -295,6 +297,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\BackpackManager\BagPackagePanel.cs" />
     <Compile Include="Assets\Scripts\BackpackManager\PanelBase.cs" />
     <Compile Include="Assets\Scripts\BackpackManager\PanelMgr.cs" />
     <Compile Include="Assets\Scripts\BackpackManager\StatuPanel.cs" />
@@ -314,6 +317,7 @@
     <Compile Include="Assets\Scripts\Player\CameraFellow.cs" />
     <Compile Include="Assets\Scripts\Player\Player.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerInfo.cs" />
     <Compile Include="Assets\Scripts\TimeSystem\DayTime.cs" />
     <Compile Include="Assets\Scripts\TimeSystem\Season.cs" />
     <Compile Include="Assets\Scripts\TimeSystem\TimeSystem.cs" />

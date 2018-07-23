@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour {
         //读取存档信息
         LoadSaveInfo();
         //生成角色
-        Player.PlayerSpawn(BornPoint);
+        PlayerSpawn(BornPoint);
         //显示状态
         PanelMgr.instance.OpenPanel<StatuPanel>("");
 
@@ -27,7 +27,7 @@ public class GameManager : MonoBehaviour {
         // 读取世界信息
         World.LoadWorldInfo();
         // 读取角色信息
-        Player.LoadPlayerInfo();
+       // Player.LoadPlayerInfo();
         
        
     }
@@ -35,7 +35,17 @@ public class GameManager : MonoBehaviour {
     //背包点击事件
     public void OnPackageClick()
     {
-        
+      PanelMgr.instance.OpenPanel<BagPackagePanel>("");
+    }
+    public void OnPackageExit()
+    {
+
     }
 
+    //角色生成器
+    public void PlayerSpawn(Vector2 pos)
+    {
+        GameObject playermodel = Resources.Load("Player/MainPlayer") as GameObject;
+        Instantiate(playermodel, pos, Quaternion.identity);
+    }
 }
