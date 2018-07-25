@@ -108,14 +108,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 560bd1fddb231e248885c97bd0082278, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerID: 0
-  PlayerName: 
-  Level: 0
-  HP: 0
-  Starvation: 0
-  Thirsty: 0
-  Attack: 0
-  Defenses: 0
 --- !u!114 &114686148622430648
 MonoBehaviour:
   m_ObjectHideFlags: 1

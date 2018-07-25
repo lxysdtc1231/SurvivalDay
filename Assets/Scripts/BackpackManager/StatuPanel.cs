@@ -36,9 +36,9 @@ public class StatuPanel : PanelBase
     {
         base.Update();
 
-        HP.text = Player.HP.ToString() ;
-        Water.text = Player.Thirsty.ToString();
-        Hunger.text = Player.Thirsty.ToString();
+        HP.text = Player.MainPlayerInfo.HP.ToString();
+        Water.text = Player.MainPlayerInfo.Thirsty.ToString();
+        Hunger.text = Player.MainPlayerInfo.Starvation.ToString();
     }
 
     #endregion

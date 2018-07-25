@@ -125,4 +125,97 @@ public class PlayerController : MonoBehaviour
 
     }
 
+    //Android
+    // 向上
+    public void BtnUp_Down()
+    {
+        if (gameObject.GetComponent<Animator>().GetInteger("Walk") == 0)
+        {
+            gameObject.GetComponent<Animator>().SetInteger("Walk", 1);
+            gameObject.GetComponent<Animator>().SetBool("Idle", false);
+            y = MoveSpeed * Time.deltaTime;
+            Player_Rot = 1;
+        }
+
+    }
+    public void BtnUp_Up()
+    {
+        if (gameObject.GetComponent<Animator>().GetInteger("Walk") == 1)
+        {
+            gameObject.GetComponent<Animator>().SetBool("Idle", true);
+            y = 0;
+            gameObject.GetComponent<Animator>().SetFloat("Blend", 1);
+            gameObject.GetComponent<Animator>().SetInteger("Walk", 0);
+        }
+    }
+
+
+    //向下
+    public void BtnDown_Down()
+    {
+        if (gameObject.GetComponent<Animator>().GetInteger("Walk") == 0)
+        {
+            gameObject.GetComponent<Animator>().SetInteger("Walk", 2);
+            gameObject.GetComponent<Animator>().SetBool("Idle", false);
+            y = -MoveSpeed * Time.deltaTime;
+            Player_Rot = 2;
+        }
+    }
+
+    public void BtnDown_Up()
+    {
+        if (gameObject.GetComponent<Animator>().GetInteger("Walk") == 2)
+        {
+            gameObject.GetComponent<Animator>().SetBool("Idle", true);
+            y = 0;
+            gameObject.GetComponent<Animator>().SetFloat("Blend", 2);
+            gameObject.GetComponent<Animator>().SetInteger("Walk", 0);
+        }
+    }
+
+    //向左
+    public void BtnLeft_Down()
+    {
+        if (gameObject.GetComponent<Animator>().GetInteger("Walk") == 0)
+        {
+            gameObject.GetComponent<Animator>().SetInteger("Walk", 3);
+            gameObject.GetComponent<Animator>().SetBool("Idle", false);
+            x = -MoveSpeed * Time.deltaTime;
+            Player_Rot = 3;
+        }
+    }
+    public void BtnLeft_Up()
+    {
+        if (gameObject.GetComponent<Animator>().GetInteger("Walk") == 3)
+        {
+            gameObject.GetComponent<Animator>().SetBool("Idle", true);
+            x = 0;
+            gameObject.GetComponent<Animator>().SetFloat("Blend", 3);
+            gameObject.GetComponent<Animator>().SetInteger("Walk", 0);
+        }
+
+    }
+
+    //向右
+    public void BtnRight_Down()
+    {
+        if (gameObject.GetComponent<Animator>().GetInteger("Walk") == 0)
+        {
+            gameObject.GetComponent<Animator>().SetInteger("Walk", 4);
+            gameObject.GetComponent<Animator>().SetBool("Idle", false);
+            x = MoveSpeed * Time.deltaTime;
+            Player_Rot = 4;
+        }
+    }
+
+    public void BtnRight_Up()
+    {
+        if (gameObject.GetComponent<Animator>().GetInteger("Walk") == 4)
+        {
+            gameObject.GetComponent<Animator>().SetBool("Idle", true);
+            x = 0;
+            gameObject.GetComponent<Animator>().SetFloat("Blend", 4);
+            gameObject.GetComponent<Animator>().SetInteger("Walk", 0);
+        }
+    }
 }

@@ -1,8 +1,8 @@
-WindowsStandalone
+Android
 SceneListBegin?
 Assets/Scene/Game.unity
 SceneListEnd?
-e310e9b89be2c9dc3d92fab1f69a6dad Assembly-CSharp.dll:.PlayerController
+2994c9de3efdb3f7dea07da703e3c5db Assembly-CSharp.dll:.PlayerController
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationPlayableAsset
 dbc29a6f2739d277c10da432d73adb6d UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationTrack
 8144169769d51429c4aedc8b0f92d47b UnityEngine.Timeline.dll:UnityEngine.Timeline.AnimationPlayableAsset
@@ -117,9 +117,10 @@ bc68edb0af574bf79f9550ead8ebae5c UnityEngine.HoloLens.dll:UnityEngine.Audio.Audi
 c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingCollider
 45f3431f0103c41611e8d4eec3d439df UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingRenderer
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.DayTime
-05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.TestSave
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Advertisements.dll:UnityEngine.Advertisements.CallbackExecutor
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Advertisements.dll:UnityEngine.Advertisements.Editor.Placeholder
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.IOHelper
+af1cc9c0f188ca199202705fd5763be2 Assembly-CSharp.dll:.BagPackagePanel
 fc1e0f4d8439d9928083474691511a13 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkAnimator
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Networking.dll:UnityEngine.Networking.NetworkBehaviour
 60b2bb652410a5867a5ab9a01cd38461 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkDiscovery
@@ -134,11 +135,12 @@ e9bdabf9265d758d56f01bb188916fa8 UnityEngine.Networking.dll:UnityEngine.Networki
 3f32f08a64daf40b09ed864d96fe3840 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransform
 73843688b51256aed059f049c540bca8 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformChild
 528ea1fd7c01796fc60c4e2f172ea229 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformVisualizer
+6e89cb7e24321ca8fd00e882f5a911b7 Assembly-CSharp.dll:.TimeSystem
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.Common
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.TestRunner.dll:UnityEngine.TestTools.TestRunner.Callbacks.PlayModeRunnerCallback
 96d0fbde9fd209878a0a291f82c9bcdd UnityEngine.TestRunner.dll:UnityEngine.TestTools.TestRunner.PlaymodeTestsController
 64eb32cc721b1cc68a91ed57461e188c UnityEngine.TestRunner.dll:UnityEngine.TestTools.TestRunner.Callbacks.RemoteTestResultSender
-79c293bad378aad4923f0f2d98737504 Assembly-CSharp.dll:.GameManager
+21c75eb3c52e7a5298d21559bf1859e9 Assembly-CSharp.dll:.GameManager
 e0f7ffd5d5c2abe4b2e16569a21163da UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioRoom
 e0f7ffd5d5c2abe4b2e16569a21163da UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioRoom
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.UIOperation
@@ -147,10 +149,11 @@ bc68edb0af574bf79f9550ead8ebae5c UnityEngine.HoloLens.dll:UnityEngine.Audio.Audi
 463516d5b5fe8e67a0a24c48f2095b04 UnityEngine.HoloLens.dll:UnityEngine.EventSystems.HoloLensInputModule
 c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingCollider
 45f3431f0103c41611e8d4eec3d439df UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingRenderer
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.Encryption
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.PanelMgr
-aabdf8efe6de7f8897535851d4fabcd0 Assembly-CSharp.dll:.StatuPanel
+3fab57a20b259c22fa2f67c1abd3cbee Assembly-CSharp.dll:.StatuPanel
 9de3a22eca9aefadba2d10d5987cefe3 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
 936a0e8be568ef4609add9548ac055fd Assembly-CSharp.dll:.World
 c8d4d4133a0932749d6faef6a840136d Assembly-CSharp.dll:.PanelBase
-3c88bad4f53bee3e043a1a7196061cd6 Assembly-CSharp.dll:.Player
-6e89cb7e24321ca8fd00e882f5a911b7 Assembly-CSharp.dll:.TimeSystem
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.Player
+2b5bd81c259c691324a17af9a3e97e85 Assembly-CSharp.dll:.ButtonEvent

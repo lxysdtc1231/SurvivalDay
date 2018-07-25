@@ -5,6 +5,7 @@ using System.Text;
 
 namespace Assets.Scripts.Player
 {
+    [Serializable]
   public class PlayerInfo
     {
         //角色ID
@@ -31,6 +32,11 @@ namespace Assets.Scripts.Player
         //角色防御力
         public int Defenses { get; set; }
       
+        //角色位置X
+        public float Pos_X { get; set; }
+
+        //角色位置Y
+        public float Pos_Y { get; set; }
 
     }
 }

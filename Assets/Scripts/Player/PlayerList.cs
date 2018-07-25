@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Assets.Scripts.Player
 {
-   public  class PlayerList
+   public  class PlayerInfoList
     {
         public Dictionary<string, string> dictionary = new Dictionary<string, string>();
     }

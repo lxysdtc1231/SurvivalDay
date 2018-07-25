@@ -10,7 +10,7 @@ public static class MapMaker  {
     public static UnityEngine.Object GrassLand_O;
     public static UnityEngine.GameObject GrassLand;
     //草地
-    [MenuItem("Assets/MapMaker/GrassSpawn")]
+    [MenuItem("MyTool/MapMaker/GrassSpawn")]
     public static void GrassSpawn()
     {
         
@@ -29,11 +29,11 @@ public static class MapMaker  {
             }
 
         }
-
+        
 
     }
     //土地
-    [MenuItem("Assets/MapMaker/SoilSpawn")]
+    [MenuItem("MyTool/MapMaker/SoilSpawn")]
     public static void LandSpawn()
     {
         GrassLand = (Resources.Load("Floor/Soil", typeof(GameObject))) as GameObject;  
@@ -50,7 +50,7 @@ public static class MapMaker  {
 
     }
     //沙
-    [MenuItem("Assets/MapMaker/SandSpawn")]
+    [MenuItem("MyTool/MapMaker/SandSpawn")]
     public static void SandSpawn()
     {
       
@@ -86,7 +86,7 @@ public static class MapMaker  {
 
     }
     //海
-    [MenuItem("Assets/MapMaker/SeaFloor")]
+    [MenuItem("MyTool/MapMaker/SeaFloor")]
     public static void SeaSpawn()
     {
       
@@ -109,7 +109,7 @@ public static class MapMaker  {
     }
 
     //海
-    [MenuItem("Assets/MapMaker/TestFloor")]
+    [MenuItem("MyTool/MapMaker/TestFloor")]
     public static void TestSpawn()
     {
         int TestRow = 500;

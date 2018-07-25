@@ -23,14 +23,18 @@ public class BagPackagePanel : PanelBase
 
     public override void OnShowing()
     {
+      
         base.OnShowing();
         Transform skinTrans = skin.transform;
         Btn_Exit = skinTrans.Find("Exit").GetComponent<Button>();
-         Btn_Exit.onClick.AddListener(Close);
+      
+        Btn_Exit.onClick.AddListener(Close);
         //HP = skinTrans.Find("Txt_HP").GetComponent<Text>();
         //Water = skinTrans.Find("Txt_Water").GetComponent<Text>();
         //Hunger = skinTrans.Find("Txt_Hunger").GetComponent<Text>();
     }
     #endregion
+    
+
 
 }
