@@ -2,6 +2,7 @@
 using System.Collections;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using Assets.Scripts.Player;
 
 public class StatuPanel : PanelBase
 {
@@ -9,8 +10,8 @@ public class StatuPanel : PanelBase
     public Text HP;
     public Text Water;
     public Text Hunger;
-    
-
+    //信息类
+    public PlayerInfo info;
     #region 生命周期
     //初始化
     public override void Init(params object[] args)
@@ -18,7 +19,7 @@ public class StatuPanel : PanelBase
         base.Init(args);
         skinPath = "UISkin/Statu_Skin";
         layer = PanelLayer.Statu;
-        
+       
     }
 
     public override void OnShowing()
@@ -28,17 +29,18 @@ public class StatuPanel : PanelBase
         HP = skinTrans.Find("Txt_HP").GetComponent<Text>();
         Water = skinTrans.Find("Txt_Water").GetComponent<Text> ();
         Hunger = skinTrans.Find("Txt_Hunger").GetComponent<Text>();
+        info = GameObject.FindWithTag("Player").GetComponent<Player>().MainPlayerInfo;
+    
       
     }
-
+ 
     //状态面板帧更新
     public override void Update()
     {
         base.Update();
-
-        HP.text = Player.MainPlayerInfo.HP.ToString();
-        Water.text = Player.MainPlayerInfo.Thirsty.ToString();
-        Hunger.text = Player.MainPlayerInfo.Starvation.ToString();
+        HP.text = info.HP.ToString();
+        Hunger.text = info.Starvation.ToString();
+        Water.text = info.Thirsty.ToString();
     }
 
     #endregion

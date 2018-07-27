@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ButtonEvent : MonoBehaviour {
     public GameObject player;
+    
 	// Use this for initialization
 	void Start () {
 		
@@ -86,5 +87,19 @@ public class ButtonEvent : MonoBehaviour {
         player.GetComponent<PlayerController>().BtnRight_Up();
     }
 
+    public void OnClickExit()
+    {
 
+        Save();
+        Application.Quit();
+    }
+
+    public void Save()
+    {
+        //数据同步
+        GameObject.FindWithTag("Player").GetComponent<Player>().MainPlayerInfo.Pos_X = GameObject.FindWithTag("Player").transform.position.x;
+        GameObject.FindWithTag("Player").GetComponent<Player>().MainPlayerInfo.Pos_Y = GameObject.FindWithTag("Player").transform.position.y;
+        //写入本地文件
+        IOHelper.Save(GameObject.FindWithTag("Player").GetComponent<Player>().MainPlayerInfo);
+    }
 }

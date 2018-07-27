@@ -13,12 +13,14 @@
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
-    <CompilerResponseFile></CompilerResponseFile>
+    <CompilerResponseFile>
+    </CompilerResponseFile>
     <UnityProjectGenerator>VSTU</UnityProjectGenerator>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>Android:13</UnityBuildTarget>
     <UnityVersion>2017.3.1f1</UnityVersion>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>
+    </RootNamespace>
     <LangVersion>4</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -302,17 +304,16 @@
     <Compile Include="Assets\Scripts\BackpackManager\UIOperation.cs" />
     <Compile Include="Assets\Scripts\Button\ButtonEvent.cs" />
     <Compile Include="Assets\Scripts\Common\Common.cs" />
+    <Compile Include="Assets\Scripts\Enemy\EnemyAI.cs" />
     <Compile Include="Assets\Scripts\Game\GameManager.cs" />
     <Compile Include="Assets\Scripts\IO\Encryption.cs" />
     <Compile Include="Assets\Scripts\IO\IOHelper.cs" />
-    <Compile Include="Assets\Scripts\Item\Ammor.cs" />
     <Compile Include="Assets\Scripts\Item\CombineFormula.cs" />
-    <Compile Include="Assets\Scripts\Item\Equipment.cs" />
-    <Compile Include="Assets\Scripts\Item\Food.cs" />
-    <Compile Include="Assets\Scripts\Item\ItemBase.cs" />
+    <Compile Include="Assets\Scripts\Item\FoodInfo.cs" />
     <Compile Include="Assets\Scripts\Item\ItemCombine.cs" />
-    <Compile Include="Assets\Scripts\Item\Materials.cs" />
-    <Compile Include="Assets\Scripts\Item\Weapon.cs" />
+    <Compile Include="Assets\Scripts\Item\ItemInfo.cs" />
+    <Compile Include="Assets\Scripts\Item\ItemInfoList.cs" />
+    <Compile Include="Assets\Scripts\Item\ItemManager.cs" />
     <Compile Include="Assets\Scripts\Player\CameraFellow.cs" />
     <Compile Include="Assets\Scripts\Player\Player.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerController.cs" />

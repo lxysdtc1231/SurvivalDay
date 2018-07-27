@@ -14,15 +14,16 @@ public class GameManager : MonoBehaviour {
           
     }
     void Start ()
-    {
-        //读取存档
-        LoadSaveInfo();
-       
-     
+    {       
         //生成角色
-        PlayerSpawn(BornPoint);
-        //显示状态
-        PanelMgr.instance.OpenPanel<StatuPanel>("");
+        PlayerSpawn();
+        //显示状态板
+        if (GameObject.FindWithTag("Player").GetComponent<Player>().MainPlayerInfo != null)
+        {
+            //显示状态
+            PanelMgr.instance.OpenPanel<StatuPanel>("");
+        }
+        
     }
     void Update () {
     
@@ -35,23 +36,23 @@ public class GameManager : MonoBehaviour {
 
 
 
-    //读取存档信息
-    public void LoadSaveInfo()
-    {
-        //读取角色信息
-        load = new PlayerInfo();
-#if UNITY_EDITOR
+//    //读取存档信息
+//    public void LoadSaveInfo()
+//    {
+//        //读取角色信息
+//        load = new PlayerInfo();
+//#if UNITY_EDITOR
 
-        load = IOHelper.LoadPlayer();
-#else
-        load=IOHelper.LoadPlayerAndroid();
-#endif
-        //出生点赋值
-        BornPoint = new Vector2(load.Pos_X, load.Pos_Y);
+//        load = IOHelper.LoadPlayer();
+//#else
+//        load=IOHelper.LoadPlayerAndroid();
+//#endif
+//        //出生点赋值
+//        BornPoint = new Vector2(load.Pos_X, load.Pos_Y);
 
-        // 读取世界信息
-        // World.LoadWorldInfo();
-    }
+//        // 读取世界信息
+//        // World.LoadWorldInfo();
+//    }
 
 
    
@@ -69,16 +70,18 @@ public class GameManager : MonoBehaviour {
     }
 
     //角色生成器
-    public void PlayerSpawn(Vector2 pos)
+    public void PlayerSpawn()
     {
         
         GameObject playermodel = Resources.Load("Player/MainPlayer") as GameObject;
-        Instantiate(playermodel, pos, Quaternion.identity);
+        //读取角色位置信息
+        Vector2 bornpoint = new Vector2(IOHelper.LoadPlayerInfo().Pos_X, IOHelper.LoadPlayerInfo().Pos_Y);
+        Instantiate(playermodel,bornpoint, Quaternion.identity);
     }
 
     //测试加血
     public void HPAdd()
     {
-        Player.MainPlayerInfo.HP +=10;
+       
     }
 }

@@ -19,15 +19,6 @@ public class UIOperation : MonoBehaviour {
         //GetItemInfo();
     }
 
-    /// <summary>
-    ///获取物品信息
-    /// 作者：
-    /// </summary>
-    public ItemBase GetItemInfo(ItemBase itemBase)
-    {
-        ItemBase get = new ItemBase();
-        get.ItemID = itemBase.ItemID;
-        return get;
-    }
+ 
 
 }

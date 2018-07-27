@@ -9,8 +9,6 @@ public class PlayerController : MonoBehaviour
     //移动速度
     public float MoveSpeed = 10;
 
-    //四向图存放
-    public List<Sprite> myrot;
     float x;
     float y;
     void Update()
@@ -94,35 +92,6 @@ public class PlayerController : MonoBehaviour
             gameObject.GetComponent<Animator>().SetInteger("Walk", 0);
 
         }
-    }
-
-    //判断当前面向
-    public void PlayerRot()
-    {
-        //上
-        if (Player_Rot == 1)
-        {
-            gameObject.GetComponent<SpriteRenderer>().sprite= myrot[0];
-        }
-        //下
-        if (Player_Rot == 2)
-        {
-            gameObject.GetComponent<SpriteRenderer>().sprite = myrot[1];
-
-        }
-        //左
-        if (Player_Rot == 3)
-        {
-            gameObject.GetComponent<SpriteRenderer>().sprite = myrot[2];
-
-        }
-        //右
-        if (Player_Rot == 4)
-        {
-            gameObject.GetComponent<SpriteRenderer>().sprite = myrot[3];
-
-        }
-
     }
 
     //Android

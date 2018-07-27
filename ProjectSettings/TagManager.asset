@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - MapFloor
+  - Enemy
   layers:
   - Default
   - TransparentFX
