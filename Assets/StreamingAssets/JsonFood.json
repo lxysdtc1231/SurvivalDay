@@ -1,5 +1,5 @@
 {
-    "Food1": { //萝卜
+    "Food1": { 
         "ItemID": "1",
         "PlayerName": "萝卜",
         "StarStarvation": "15",
@@ -7,7 +7,7 @@
         " State": "0",
         "Describe": "生津止渴，少量分布的蔬菜"
     },
-    "Food2": { //萝卜干
+    "Food2": { 
         "ItemID": "2",
         "PlayerName": "萝卜干",
         "StarStarvation": "20",
@@ -15,7 +15,7 @@
         " State": "0",
         "Describe": "通过烤制后的萝卜，风味更佳"
     },
-    "Food3": { //野果
+    "Food3": { 
         "ItemID": "3",
         "PlayerName": "野果",
         "StarStarvation": "5",
@@ -25,7 +25,7 @@
     },
 
 
-    "Food4": { //毒野果
+    "Food4": { 
         "ItemID": "4",
         "PlayerName": "毒野果",
         "StarStarvation": "5",
@@ -35,7 +35,7 @@
     },
 
 
-    "Food5": { //苹果
+    "Food5": { 
         "ItemID": "5",
         "PlayerName": "苹果",
         "StarStarvation": "10",
@@ -43,7 +43,7 @@
         " State": "0",
         "Describe": "香甜且富含维生素，每天一苹果，医生远离我"
     },
-    "Food6": { //烤苹果
+    "Food6": { 
         "ItemID": "6",
         "PlayerName": "烤苹果",
         "StarStarvation": "15",
@@ -51,7 +51,7 @@
         " State": "0",
         "Describe": "烤制的苹果任然多汁可口"
     },
-    "Food7": { //白菜
+    "Food7": { 
         "ItemID": "7",
         "PlayerName": "白菜",
         "StarStarvation": "10",
@@ -59,7 +59,7 @@
         " State": "0",
         "Describe": "虽然生吃也不错，但还是做菜好吃"
     },
-    "Food8": { //土豆
+    "Food8": { 
         "ItemID": "8",
         "PlayerName": "土豆",
         "StarStarvation": "15",
@@ -67,7 +67,7 @@
         " State": "0",
         "Describe": "土豆的美味是吃不腻的，怎样都好吃"
     },
-    "Food9": { //烤土豆
+    "Food9": {
         "ItemID": "9",
         "PlayerName": "烤土豆",
         "StarStarvation": "25",
@@ -75,7 +75,7 @@
         " State": "0",
         "Describe": "烤制后的土豆香气让人垂涎欲滴"
     },
-    "Food10": { //煮土豆
+    "Food10": { 
         "ItemID": "10",
         "PlayerName": "煮土豆",
         "StarStarvation": "20",
@@ -83,7 +83,7 @@
         " State": "0",
         "Describe": "煮过的土豆热气腾腾，水分含量更多"
     },
-    "Food11": { //青椒
+    "Food11": { 
         "ItemID": "11",
         "PlayerName": "青椒",
         "StarStarvation": "5",
@@ -91,7 +91,7 @@
         " State": "2",
         "Describe": "虽然生吃也可以，不过还是做菜香"
     },
-    "Food12": { //番茄
+    "Food12": { 
         "ItemID": "12",
         "PlayerName": "番茄",
         "StarStarvation": "10",
@@ -99,7 +99,7 @@
         " State": "0",
         "Describe": "可以做菜的，多汁的水果"
     },
-    "Food13": { //玉米
+    "Food13": { 
         "ItemID": "13",
         "PlayerName": "玉米",
         "StarStarvation": "5",
@@ -107,7 +107,7 @@
         " State": "0",
         "Describe": "虽然好吃，但生吃的话牙会有点疼"
     },
-    "Food14": { //烤玉米
+    "Food14": { 
         "ItemID": "14",
         "PlayerName": "烤玉米",
         "StarStarvation": "15",
@@ -115,7 +115,7 @@
         " State": "0",
         "Describe": "烤制过后的玉米香气中还带着一丝糊味"
     },
-    "Food15": { //煮玉米
+    "Food15": {
         "ItemID": "15",
         "PlayerName": "煮玉米",
         "StarStarvation": "10",
