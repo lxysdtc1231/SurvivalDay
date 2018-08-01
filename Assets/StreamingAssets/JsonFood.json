@@ -1,127 +1,127 @@
-{
+ï»¿{
     "Food1": { 
         "ItemID": "1",
-        "PlayerName": "ÂÜ²·",
+        "PlayerName": "èåœ",
         "StarStarvation": "15",
         "Thirsty": "5",
         " State": "0",
-        "Describe": "Éú½òÖ¹¿Ê£¬ÉÙÁ¿·Ö²¼µÄÊß²Ë"
+        "Describe": "ç”Ÿæ´¥æ­¢æ¸´ï¼Œå°‘é‡åˆ†å¸ƒçš„è”¬èœ"
     },
     "Food2": { 
         "ItemID": "2",
-        "PlayerName": "ÂÜ²·¸É",
+        "PlayerName": "èåœå¹²",
         "StarStarvation": "20",
         "Thirsty": "5",
         " State": "0",
-        "Describe": "Í¨¹ı¿¾ÖÆºóµÄÂÜ²·£¬·çÎ¶¸ü¼Ñ"
+        "Describe": "é€šè¿‡çƒ¤åˆ¶åçš„èåœï¼Œé£å‘³æ›´ä½³"
     },
     "Food3": { 
         "ItemID": "3",
-        "PlayerName": "Ò°¹û",
+        "PlayerName": "é‡æœ",
         "StarStarvation": "5",
         "Thirsty": "5",
         " State": "0",
-        "Describe": "Ëæ´¦¿É¼ûÇÒÏãÌğ¿É¿ÚµÄ¹û×Ó"
+        "Describe": "éšå¤„å¯è§ä¸”é¦™ç”œå¯å£çš„æœå­"
     },
 
 
     "Food4": { 
         "ItemID": "4",
-        "PlayerName": "¶¾Ò°¹û",
+        "PlayerName": "æ¯’é‡æœ",
         "StarStarvation": "5",
         "Thirsty": "5",
         "State": "1",
-        "Describe": "ÔÚÄ³Ğ©³Ì¶ÈÉÏ£¬Ò²ÊÇÒ»ÖÖÃÀÎ¶......"
+        "Describe": "åœ¨æŸäº›ç¨‹åº¦ä¸Šï¼Œä¹Ÿæ˜¯ä¸€ç§ç¾å‘³......"
     },
 
 
     "Food5": { 
         "ItemID": "5",
-        "PlayerName": "Æ»¹û",
+        "PlayerName": "è‹¹æœ",
         "StarStarvation": "10",
         "Thirsty": "10",
         " State": "0",
-        "Describe": "ÏãÌğÇÒ¸»º¬Î¬ÉúËØ£¬Ã¿ÌìÒ»Æ»¹û£¬Ò½ÉúÔ¶ÀëÎÒ"
+        "Describe": "é¦™ç”œä¸”å¯Œå«ç»´ç”Ÿç´ ï¼Œæ¯å¤©ä¸€è‹¹æœï¼ŒåŒ»ç”Ÿè¿œç¦»æˆ‘"
     },
     "Food6": { 
         "ItemID": "6",
-        "PlayerName": "¿¾Æ»¹û",
+        "PlayerName": "çƒ¤è‹¹æœ",
         "StarStarvation": "15",
         "Thirsty": "10",
         " State": "0",
-        "Describe": "¿¾ÖÆµÄÆ»¹ûÈÎÈ»¶àÖ­¿É¿Ú"
+        "Describe": "çƒ¤åˆ¶çš„è‹¹æœä»»ç„¶å¤šæ±å¯å£"
     },
     "Food7": { 
         "ItemID": "7",
-        "PlayerName": "°×²Ë",
+        "PlayerName": "ç™½èœ",
         "StarStarvation": "10",
         "Thirsty": "5",
         " State": "0",
-        "Describe": "ËäÈ»Éú³ÔÒ²²»´í£¬µ«»¹ÊÇ×ö²ËºÃ³Ô"
+        "Describe": "è™½ç„¶ç”Ÿåƒä¹Ÿä¸é”™ï¼Œä½†è¿˜æ˜¯åšèœå¥½åƒ"
     },
     "Food8": { 
         "ItemID": "8",
-        "PlayerName": "ÍÁ¶¹",
+        "PlayerName": "åœŸè±†",
         "StarStarvation": "15",
         "Thirsty": "5",
         " State": "0",
-        "Describe": "ÍÁ¶¹µÄÃÀÎ¶ÊÇ³Ô²»ÄåµÄ£¬ÔõÑù¶¼ºÃ³Ô"
+        "Describe": "åœŸè±†çš„ç¾å‘³æ˜¯åƒä¸è…»çš„ï¼Œæ€æ ·éƒ½å¥½åƒ"
     },
     "Food9": {
         "ItemID": "9",
-        "PlayerName": "¿¾ÍÁ¶¹",
+        "PlayerName": "çƒ¤åœŸè±†",
         "StarStarvation": "25",
         "Thirsty": "5",
         " State": "0",
-        "Describe": "¿¾ÖÆºóµÄÍÁ¶¹ÏãÆøÈÃÈË´¹ÏÑÓûµÎ"
+        "Describe": "çƒ¤åˆ¶åçš„åœŸè±†é¦™æ°”è®©äººå‚æ¶æ¬²æ»´"
     },
     "Food10": { 
         "ItemID": "10",
-        "PlayerName": "ÖóÍÁ¶¹",
+        "PlayerName": "ç…®åœŸè±†",
         "StarStarvation": "20",
         "Thirsty": "10",
         " State": "0",
-        "Describe": "Öó¹ıµÄÍÁ¶¹ÈÈÆøÌÚÌÚ£¬Ë®·Öº¬Á¿¸ü¶à"
+        "Describe": "ç…®è¿‡çš„åœŸè±†çƒ­æ°”è…¾è…¾ï¼Œæ°´åˆ†å«é‡æ›´å¤š"
     },
     "Food11": { 
         "ItemID": "11",
-        "PlayerName": "Çà½·",
+        "PlayerName": "é’æ¤’",
         "StarStarvation": "5",
         "Thirsty": "0",
         " State": "2",
-        "Describe": "ËäÈ»Éú³ÔÒ²¿ÉÒÔ£¬²»¹ı»¹ÊÇ×ö²ËÏã"
+        "Describe": "è™½ç„¶ç”Ÿåƒä¹Ÿå¯ä»¥ï¼Œä¸è¿‡è¿˜æ˜¯åšèœé¦™"
     },
     "Food12": { 
         "ItemID": "12",
-        "PlayerName": "·¬ÇÑ",
+        "PlayerName": "ç•ªèŒ„",
         "StarStarvation": "10",
         "Thirsty": "10",
         " State": "0",
-        "Describe": "¿ÉÒÔ×ö²ËµÄ£¬¶àÖ­µÄË®¹û"
+        "Describe": "å¯ä»¥åšèœçš„ï¼Œå¤šæ±çš„æ°´æœ"
     },
     "Food13": { 
         "ItemID": "13",
-        "PlayerName": "ÓñÃ×",
+        "PlayerName": "ç‰ç±³",
         "StarStarvation": "5",
         "Thirsty": "5",
         " State": "0",
-        "Describe": "ËäÈ»ºÃ³Ô£¬µ«Éú³ÔµÄ»°ÑÀ»áÓĞµãÌÛ"
+        "Describe": "è™½ç„¶å¥½åƒï¼Œä½†ç”Ÿåƒçš„è¯ç‰™ä¼šæœ‰ç‚¹ç–¼"
     },
     "Food14": { 
         "ItemID": "14",
-        "PlayerName": "¿¾ÓñÃ×",
+        "PlayerName": "çƒ¤ç‰ç±³",
         "StarStarvation": "15",
         "Thirsty": "5",
         " State": "0",
-        "Describe": "¿¾ÖÆ¹ıºóµÄÓñÃ×ÏãÆøÖĞ»¹´ø×ÅÒ»Ë¿ºıÎ¶"
+        "Describe": "çƒ¤åˆ¶è¿‡åçš„ç‰ç±³é¦™æ°”ä¸­è¿˜å¸¦ç€ä¸€ä¸ç³Šå‘³"
     },
     "Food15": {
         "ItemID": "15",
-        "PlayerName": "ÖóÓñÃ×",
+        "PlayerName": "ç…®ç‰ç±³",
         "StarStarvation": "10",
         "Thirsty": "10",
         " State": "0",
-        "Describe": "Öó¹ıµÄÓñÃ×ÏãÅ´ğ¤ÑÀ£¬º¬Ë®·İ¶à"
+        "Describe": "ç…®è¿‡çš„ç‰ç±³é¦™ç³¯é»ç‰™ï¼Œå«æ°´ä»½å¤š"
     }
 
 }

@@ -1,4 +1,5 @@
-﻿using Assets.Scripts.Player;
+﻿using Assets.Scripts.Item;
+using Assets.Scripts.Player;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
@@ -7,11 +8,12 @@ using UnityEngine;
 public class GameManager : MonoBehaviour {
     public Vector2 BornPoint;
     public PlayerInfo load;
+ 
     // Use this for ini1tialization
     #region 生命周期
     void Awake()
     {
-          
+ 
     }
     void Start ()
     {       
@@ -23,7 +25,9 @@ public class GameManager : MonoBehaviour {
             //显示状态
             PanelMgr.instance.OpenPanel<StatuPanel>("");
         }
-        
+        IOHelper.LoadItmeInfo();
+       
+       
     }
     void Update () {
     

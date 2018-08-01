@@ -9,6 +9,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Collections.Generic;
 using Assets.Scripts.Item;
+using Newtonsoft.Json;
 
 public class IOHelper : MonoBehaviour
 {
@@ -310,31 +311,20 @@ public class IOHelper : MonoBehaviour
     public static FoodInfo LoadItmeInfo()
     {
         FoodInfo foodInfo = new FoodInfo();
-        //食品信息读取路径   
-        string filePath = Application.streamingAssetsPath + "/JsonFood.json";
-        string jsonStr = GetJsonByWWW("/JsonFood.json");
-        JsonData jsdata3 = JsonMapper.ToObject(jsonStr);
-        for (int i = 0; i < jsdata3.Count; i++)
+        string jsonStr = GetJsonByWWW("/JsonFoods.json");
+        //  JsonData jsdata3 = JsonMapper.ToObject(jsonStr);
+        List<FoodInfo> foodInfos = JsonMapper.ToObject<List<FoodInfo>>(jsonStr);
+        for (int i = 0; i < foodInfos.Count; i++)
         {
-            Debug.Log(jsdata3[i]);
-            if (i == 0)
-                foodInfo.ItemID = int.Parse(jsdata3[i].ToString());
-            else if (i == 1)
-                foodInfo.ItemName = jsdata3[i].ToString();
-            else if (i == 2)
-                foodInfo.ItmeType = int.Parse(jsdata3[i].ToString());
-            else if (i == 3)
-                foodInfo.StarStarvation = int.Parse(jsdata3[i].ToString());
-            else if (i == 4)
-                foodInfo.Thirsty = int.Parse(jsdata3[i].ToString());
-            else if (i == 5)
-                foodInfo.State = int.Parse(jsdata3[i].ToString());
-            else if (i == 6)
-                foodInfo.Describe= jsdata3[i].ToString();
+            Debug.Log("物品ID："+foodInfos[i].ItemID);
+            Debug.Log(foodInfos[i].ItemName);
+            Debug.Log("物品类型：" + foodInfos[i].ItmeType);
+            Debug.Log("饥饿回复：" + foodInfos[i].StarStarvation);
+            Debug.Log("口渴回复：" + foodInfos[i].Thirsty);
+            Debug.Log("状态值：" + foodInfos[i].State);
+            Debug.Log("物品描述：" + foodInfos[i].Describe);
+
         }
-        Debug.Log(jsonStr);
-
-
         return foodInfo;
     }
     //用StreamReader读取Json
@@ -353,14 +343,24 @@ public class IOHelper : MonoBehaviour
     //用WWW从StreamAssets读取Json
     public static string GetJsonByWWW(string path)
     {
+        //string localPath = "";
+        //localPath = Application.streamingAssetsPath + path;
+        //WWW t_WWW = new WWW(localPath);
+        //return t_WWW.text;
         string localPath = "";
         localPath = Application.streamingAssetsPath + path;
-        WWW t_WWW = new WWW(localPath);
-        Debug.Log("t_WWW.text=  " + t_WWW.text);
-        return t_WWW.text;
+
+        StreamReader reader = new StreamReader(localPath);
+        string jsonData = reader.ReadToEnd();
+
+        return jsonData;
     }
 
+    //public static List<FoodInfo> LoadFood()
+    //{
+    //    //return JsonConvert.DeserializeObject<List<FoodInfo>>(GetJsonByWWW("/JsonFood1.json"));
 
+    //}
 
 
 

@@ -1,0 +1,140 @@
+﻿[
+    { 
+        "ItemID": 1,
+        "ItemName": "萝卜",
+        "ItemType":"0",
+        "StarStarvation": 15,
+        "Thirsty": 5,
+        " State": 0,
+        "Describe": "生津止渴，少量分布的蔬菜"
+    },
+    { 
+        "ItemID": 2,
+        "PlayerName": "萝卜干",
+	"ItemType":"0",
+        "StarStarvation": 20,
+        "Thirsty": 5,
+        " State": 0,
+        "Describe": "通过烤制后的萝卜，风味更佳"
+    },
+    { 
+        "ItemID": 3,
+        "ItemName": "野果",
+	"ItemType":"0",        
+	"StarStarvation": 5,
+        "Thirsty": 5,
+        " State": 0,
+        "Describe": "随处可见且香甜可口的果子"
+    },
+   { 
+        "ItemID": 4,
+        "ItemName": "毒野果",
+	"ItemType":"0",
+        "StarStarvation": 5,
+        "Thirsty": 5,
+        "State": 1,
+        "Describe": "在某些程度上，也是一种美味......"
+    },
+
+
+     { 
+        "ItemID": 5,
+        "ItemName": "苹果",
+	"ItemType":"0",
+        "StarStarvation": 10,
+        "Thirsty": 10,
+        " State": 0,
+        "Describe": "香甜且富含维生素，每天一苹果，医生远离我"
+    },
+    { 
+        "ItemID": 6,
+        "ItemName": "烤苹果",
+	"ItemType":"0",
+        "StarStarvation": 15,
+        "Thirsty": 10,
+        " State": "0",
+        "Describe": "烤制的苹果任然多汁可口"
+    },
+     { 
+        "ItemID": 7,
+        "ItemName": "白菜",
+	"ItemType":"0",
+        "StarStarvation": 10,
+        "Thirsty": 5,
+        " State": 0,
+        "Describe": "虽然生吃也不错，但还是做菜好吃"
+    },
+     { 
+        "ItemID": 8,
+        "ItemName": "土豆",
+	"ItemType":"0",
+        "StarStarvation": 15,
+        "Thirsty": 5,
+        " State": 0,
+        "Describe": "土豆的美味是吃不腻的，怎样都好吃"
+    },
+ {
+        "ItemID": 9,
+        "ItemName": "烤土豆",
+	"ItemType":"0",
+        "StarStarvation": 25,
+        "Thirsty": 5,
+        " State": "0",
+        "Describe": "烤制后的土豆香气让人垂涎欲滴"
+    },
+     { 
+        "ItemID": 10,
+        "ItemName": "煮土豆",
+	"ItemType":"0",
+        "StarStarvation": 20,
+        "Thirsty": 10,
+        " State": 0,
+        "Describe": "煮过的土豆热气腾腾，水分含量更多"
+    },
+    { 
+        "ItemID": 11,
+        "ItemName": "青椒",
+	"ItemType":"0",
+        "StarStarvation": 5,
+        "Thirsty": 0,
+        " State": 2,
+        "Describe": "虽然生吃也可以，不过还是做菜香"
+    },
+     { 
+        "ItemID": 12,
+        "ItemName": "番茄",
+	"ItemType":"0",
+        "StarStarvation": 10,
+        "Thirsty": 10,
+        " State": 0,
+        "Describe": "可以做菜的，多汁的水果"
+    },
+   { 
+        "ItemID": 13,
+        "ItemName": "玉米",
+	"ItemType":"0",
+        "StarStarvation": 5,
+        "Thirsty": 5,
+        " State": 0,
+        "Describe": "虽然好吃，但生吃的话牙会有点疼"
+    },
+     { 
+        "ItemID": 14,
+        "ItemName": "烤玉米",
+	"ItemType":"0",
+        "StarStarvation": 15,
+        "Thirsty": 5,
+        " State": 0,
+        "Describe": "烤制过后的玉米香气中还带着一丝糊味"
+    },
+  {
+        "ItemID": 15,
+        "ItemName": "煮玉米",
+	"ItemType":"0",
+        "StarStarvation": 10,
+        "Thirsty": 10,
+        " State": 0,
+        "Describe": "煮过的玉米香糯黏牙，含水份多"
+    }
+] 
+

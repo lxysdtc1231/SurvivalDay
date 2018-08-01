@@ -7,19 +7,21 @@ namespace Assets.Scripts.Item
 {
    public class FoodInfo:ItemInfo
     {
+
         //饱腹度增加值
-        public int StarStarvation;
+        public int StarStarvation { get; set; }
 
         //口渴值增加
-        public int Thirsty;
+        public int Thirsty { get; set; }
 
         //状态
-        public int State;
+        public int State { get; set; }
+
 
         //描述
-        public string Describe;
+        public string Describe { get; set; }
 
-       
+
 
     }
 }
